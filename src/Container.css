@@ -1,0 +1,136 @@
+:root {
+    --defined-color: red;
+    --defined-color-old: green;
+}
+
+.container {
+    padding: 40px 50px 40px 50px;
+    background: white;
+    width: 450px;
+    height: auto;
+    border-radius: 3px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.quote::before {
+    font: var(--fa-font-solid);
+    content: "\f10d";
+    margin-right: 5px;
+}
+
+.quote::after {
+    font: var(--fa-font-solid);
+    content: "\f10e";
+    margin-left: 5px
+}
+
+.twitter::before {
+    font: var(--fa-font-solid);
+    content: "\f081";
+}
+
+.tumblr::before {
+    font: var(--fa-font-solid);
+    content: "\f173";
+}
+
+p {
+    color: var(--defined-color-old);
+    animation: animate-text-color 1s linear forwards;
+}
+
+
+.animation-text-opacity {
+    animation: text-opacity 1s linear forwards;
+}
+
+.author {
+    font-size: 0.7em;
+    text-align: right;
+}
+
+nav a:first-child {
+    margin-right: 5px;
+}
+
+nav a, nav button {
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+nav a {
+    color: var(--defined-color-old);
+    animation: animate-text-color 1s linear forwards;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    align-items: center;
+    
+}
+
+nav a:hover, nav button:hover {
+    opacity: 0.8;
+}
+
+nav a:active, nav button:active {
+    opacity: 0.4;
+}
+
+nav button {
+    position: relative;
+    height: 40px;
+    width: 75px;
+    color: white;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background: var(--defined-color-old);
+    animation: animate-background 1s linear forwards;
+}
+
+@keyframes animate-text-color {
+    from {
+        color: var(--defined-color-old);
+    }
+
+    to {
+        color: var(--defined-color);
+    }
+}
+
+@keyframes animate-background {
+    from {
+        background: var(--defined-color-old);
+    }
+
+    to {
+        background: var(--defined-color);
+    }
+}
+
+
+
+@keyframes text-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}

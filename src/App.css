@@ -1,0 +1,24 @@
+
+
+
+.App {
+  --var-background-color: yellow;
+  --var-background-color-old: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--var-background-color);
+  animation: background-animate 1s linear;
+}
+
+@keyframes background-animate {
+  from {
+    background: var(--var-background-color-old)
+  }
+  to {
+    background: var(--var-background-color);
+  }
+}
+
